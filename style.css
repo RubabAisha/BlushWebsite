@@ -34,7 +34,10 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .section-header { text-align: center;padding-bottom: 30px; color:#000;}
-.section-header h2{ font-size: 48px;}
+.section-header h2{ font-size: 48px; 
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+  }
 
  section{ padding: 100px 0 50px }
 .section-carousel{ padding: 50px 0 0 }
@@ -49,6 +52,7 @@ h1, h2, h3, h4, h5, h6{
 .site-header.sticky-header {background-color: #e8206b;}
 
 .navigation .nav-link{ text-transform: uppercase;color:#fff !important;font-size: 14px;}
+.navigation .nav-item .nav-link.active{ color:#000 !important}
 
 /* INTRO */
 .section-intro {background-color: #e8206b;color: #fff;padding: 60px 0; text-align: center;}
@@ -87,7 +91,7 @@ h1, h2, h3, h4, h5, h6{
 
 /* BIG SOCIAL BUTTONS */
 .section-social .social-links { text-align:center }
-.section-social .social-links ul { margin:0; list-style:none }
+.section-social .social-links ul { padding:0; margin:0; list-style:none }
 .section-social .social-links li { display:inline-block; vertical-align:top; margin:0 22px }
 .section-social .social-links li a { text-decoration:none; line-height:1 }
 .section-social .social-links li .icon { display:block; width:166px; height:166px; font-size:110px; text-align:center; line-height:166px;  color:#fff; background:#e8206b; border:8px solid #d5256d; border-radius:100%; transition:0.5s }
@@ -125,15 +129,31 @@ h1, h2, h3, h4, h5, h6{
 .site-footer a:hover {color: #e8206b;}
 .site-footer .map-overlay {position: absolute;left: 50%;height:400px;margin-top:-405px;background-color: #232323;padding:40px;color: #848484;}
 
+/*---------------------------------------------------------------- 
+  COMMON STYLES FOR MOBILE AND TABLET 
+  ----------------------------------------------------------------*/
+
+@media only screen and (max-width:1023px) {
+.site-header .site-logo{ font-size: 40px }
+  }
 
 @media only screen and (max-width:767px) {
 
-.site-header{ position: static }
+.page{ padding-top:50px }
 
 .site-footer .map-overlay{ position: static; margin:0 }
 
 .section-contact input,
 .section-contact textarea{width: 100%;}
 
+.section-carousel{ padding: 0 }
+
+.section-about{ background-size: contain }
+
+}
+
+@media only screen and (max-width:575px) {
+
+.navigation { margin-top: -50px }
 
 }

@@ -16,7 +16,7 @@ $(window).scroll(function(e){
   });
 
   $(document).ready(function() {
-      
+	
 	// Page Scroll
 	var sections = $('section')
 		nav = $('nav[role="navigation"]');
@@ -32,21 +32,15 @@ $(window).scroll(function(e){
 	    	}
 	  	});
 	});
-	nav.find('a').on('click', function () {
-	  	var $el = $(this)
-	    	id = $el.attr('href');
-		$('html, body').animate({
-			scrollTop: $(id).offset().top - 75
-		}, 500);
-	  return false;
-	});
+	// nav.find('a').on('click', function () {
+	//   	var $el = $(this)
+	//     	id = $el.attr('href');
+	// 	$('html, body').animate({
+	// 		scrollTop: $(id).offset().top - 75
+	// 	}, 500);
+	//   return false;
+	// });
 
-	
-	
-	
-	
-	
-	
-	
-	
+
 });
+	
